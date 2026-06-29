@@ -1,0 +1,394 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-geist-mono);
+  /* Velvet Rouge editorial palette */
+  --color-ink: #090909;
+  --color-ink-soft: #0e0d0d;
+  --color-bone: #f5f2ed;
+  --color-bone-dim: #a8a39b;
+  --color-bone-faint: #6b6862;
+  --color-rouge: #5e1018;
+  --color-rouge-bright: #8a1822;
+  --color-ash: #1a1818;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ===== Velvet Rouge editorial system ===== */
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #090909;
+  color: #f5f2ed;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv01", "cv03";
+  overflow-x: hidden;
+}
+
+/* Premium editorial display — Manrope (Neue Montreal / General Sans feel) */
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+/* Tracked label (eyebrow) — refined */
+.label-track {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.38em;
+  font-size: 0.6875rem;
+}
+
+/* The wordmark — thin, wide-tracked, uppercase */
+.wordmark {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+@media (min-width: 640px) {
+  .wordmark {
+    letter-spacing: 0.5em;
+  }
+}
+
+/* Custom scrollbar — slim, on-brand */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2526;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5e1018;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2526 #090909;
+}
+
+/* Film grain overlay */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Subtle vignette */
+.vignette::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+/* Hairline divider */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(245, 242, 237, 0.18),
+    transparent
+  );
+}
+
+/* Image reveal mask */
+.reveal-mask {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 100%);
+}
+
+/* Hide scrollbar on horizontal rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Slow cinematic ken-burns */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.16) translate3d(0, -1.5%, 0);
+  }
+}
+.kenburns {
+  animation: kenburns 14s ease-out forwards;
+}
+
+/* Soft pulsing scroll cue */
+@keyframes cue {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(6px);
+  }
+}
+.cue {
+  animation: cue 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .kenburns,
+  .cue {
+    animation: none;
+  }
+}
+
+/* ===== NIGHTTIDE OS — cinematic emotional system ===== */
+
+/* Deep night gradient base — replaces flat black for the living system */
+.night-bg {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 38%, rgba(28, 26, 40, 0.55), transparent 70%),
+    radial-gradient(ellipse 90% 70% at 50% 100%, rgba(18, 16, 22, 0.8), transparent 60%),
+    #050506;
+}
+
+/* Soft bloom — keeps blacks deep but lifts highlights like film */
+.bloom {
+  filter: contrast(1.02) saturate(1.04);
+}
+
+/* Slow floating drift for ambient layers */
+@keyframes float-drift {
+  0% { transform: translate3d(0, 0, 0) scale(1.05); }
+  50% { transform: translate3d(0, -1.5%, 0) scale(1.09); }
+  100% { transform: translate3d(0, 0, 0) scale(1.05); }
+}
+.drift {
+  animation: float-drift 26s ease-in-out infinite;
+}
+
+/* Slow breathing for the night glow */
+@keyframes breathe {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.85; }
+}
+.breathe {
+  animation: breathe 9s ease-in-out infinite;
+}
+
+/* Manifesto type reveal — char mask */
+.char-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+.char-inner {
+  display: inline-block;
+}
+
+/* City color-grade image base */
+.city-grade {
+  transition: filter 2.6s ease, opacity 2s ease, transform 16s ease;
+  will-change: filter, opacity, transform;
+}
+
+/* Enter portal — pulsing ring */
+@keyframes portal {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.04); }
+}
+.portal {
+  animation: portal 3.4s ease-in-out infinite;
+}
+
+/* Slow opacity-in for cinematic dissolves (utility) */
+.dissolve-in {
+  animation: dissolve-in 2.4s ease forwards;
+}
+@keyframes dissolve-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hide native focus ring noise but keep accessibility outline on keyboard */
+:focus-visible {
+  outline: 1px solid rgba(245, 242, 237, 0.4);
+  outline-offset: 4px;
+}
+
+
+
+/* ===== Luxury Sound Experience ===== */
+
+/* Subtle sound-on pulse — minimal, elegant, no flashy equalizer */
+@keyframes sound-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0; transform: scale(2.4); }
+}
+.animate-sound-pulse {
+  animation: sound-pulse 3.4s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-sound-pulse {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* Premium editorial hover lift for cards */
+.lift-lux {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lift-lux:hover {
+  transform: translateY(-4px);
+}
