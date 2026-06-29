@@ -37,7 +37,16 @@ Velvet Rouge is a nocturnal journey through longing, obsession, desire, and the 
 | `BRAND-STRATEGY.md` | Full brand strategy, positioning, and visual direction |
 | `BUILD-LOG-ZAI.md` | Build log from z.ai (Next.js + sound + images) |
 
+## Sonora Brain Integration
+
+Connected to **Sonora Brain v3** stack:
+- **OpenClaw** — HTTP API (`:8765`) for lead capture (What If responses + email signups)
+- **Engram** — Persistent memory for cross-session insights
+- **GBrain** — Orchestration layer for agent workflows
+
+The `sonora-brain.js` connector automatically syncs form submissions to OpenClaw, with localStorage fallback when offline.
+
 ## Live
 
-- **Web:** [velvetrouge.space-z.ai](https://velvetrouge.space-z.ai)
+- **Web (Vercel):** [https://velvet-rouge.vercel.app](https://velvet-rouge.vercel.app)
 - **GitHub:** [nikkiai809/Velvet-Rouge](https://github.com/nikkiai809/Velvet-Rouge)
