@@ -1,52 +1,99 @@
-# VELVET ROUGE — 11.11.2026
+# VELVET ROUGE — Global Creative Network
 
-> *The moment just before.*
+> *A private global creative network connecting the world's most creative cities.*
 
-**trois villes · une nuit**
+**Est. MMXXV · By Invitation**
 
-Velvet Rouge is a nocturnal journey through longing, obsession, desire, and the quiet transformation of dawn. A luxury editorial experience for those who feel most alive when the world is asleep.
+**Six cities, one coordinate.** Velvet Rouge is not a brand, not an event, not a place. It is a private network drawn between six cities — a single coordinate of culture that moves, once a year, across the globe. Nothing is announced. Everything is implied.
 
-## Stack
-
-- **Night Edition v1** — Static HTML/CSS/JS single-page experience. Full-screen sections, living time system, what-if engine, letters never sent, archetypes.
-- **Teaser Engine v2** — Procedural canvas teaser (1080×1920, 20s, 24fps). Simplex noise fabric textures, cinematic scenes across CDMX → Tokyo → Guangzhou.
-- **Next.js App** (z.ai) — Procedural Web Audio ambient soundscapes, city image network, deployed at `velvetrouge.space-z.ai`.
-
-## Sections
-
-| # | Section | Time |
-|---|---------|------|
-| 0 | Opening Sequence | — |
-| 1 | Hero | — |
-| 2 | Act I — The Night | 22:00–23:30 |
-| 3 | Act II — The Longing | 23:30–01:00 |
-| 4 | The Question | 01:00–02:30 |
-| 5 | Act III — The Tension | 02:30–04:00 |
-| 6 | Letters Never Sent | 04:00–04:30 |
-| 7 | The People Who Stay Awake | 04:30–05:00 |
-| 8 | Dawn | 05:00–06:00 |
-| 9 | The Invitation | — |
-
-## Files
-
-| File | Description |
-|------|-------------|
-| `index.html` | Night Edition v1 — main experience |
-| `teaser.html` | Cinematic Teaser Engine v2 (canvas, 20s) |
-| `teaser-simple.html` | Teaser v2 standalone |
-| `BRAND-STRATEGY.md` | Full brand strategy, positioning, and visual direction |
-| `BUILD-LOG-ZAI.md` | Build log from z.ai (Next.js + sound + images) |
-
-## Sonora Brain Integration
-
-Connected to **Sonora Brain v3** stack:
-- **OpenClaw** — HTTP API (`:8765`) for lead capture (What If responses + email signups)
-- **Engram** — Persistent memory for cross-session insights
-- **GBrain** — Orchestration layer for agent workflows
-
-The `sonora-brain.js` connector automatically syncs form submissions to OpenClaw, with localStorage fallback when offline.
+---
 
 ## Live
 
-- **Web (Vercel):** [https://velvet-rouge.vercel.app](https://velvet-rouge.vercel.app)
-- **GitHub:** [nikkiai809/Velvet-Rouge](https://github.com/nikkiai809/Velvet-Rouge)
+🌐 **https://velvetrouge.space-z.ai**
+
+---
+
+## The Network
+
+| # | City | Region | Coordinates |
+|---|------|--------|-------------|
+| 01 | Mexico City | North America | 19.43°N · 99.13°W |
+| 02 | Tokyo | East Asia | 35.68°N · 139.69°E |
+| 03 | Seoul | East Asia | 37.56°N · 126.97°E |
+| 04 | Berlin | Europe | 52.52°N · 13.40°E |
+| 05 | Los Angeles | North America | 34.05°N · 118.24°W |
+| 06 | Shanghai | East Asia | 31.23°N · 121.47°E |
+
+---
+
+## Sections
+
+| Section | Description |
+|---------|-------------|
+| **The Thread (I)** | The invisible connection between creative cities |
+| **Night Notes** | Living editorial — observations from the network |
+| **The Network (II)** | City showcase with full-bleed photography |
+| **Dispatches** | Cultural signals filed from across the network |
+| **The Archive** | Collected observations, field notes, fragments |
+| **Coordinates (III)** | The six cities with their geographic positions |
+| **Index (IV)** | Network statistics: 6 cities, 4 continents, 1 network |
+| **Film** | Cinematic full-screen viewing experience |
+
+---
+
+## Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Framework** | Next.js 14 (App Router) |
+| **Language** | TypeScript (strict) |
+| **Styling** | TailwindCSS + CSS modules |
+| **Animation** | Framer Motion (scroll, reveal, transitions) |
+| **Sound** | Procedural Web Audio (AmbientAudio engine) |
+| **Deployment** | space-z.ai (Alibaba Cloud · Hong Kong) |
+
+### Sound System
+
+- Procedural Web Audio ambient soundscape — no audio files to preload
+- Never autoplays — requires explicit user toggle
+- Night Skyline soundscape: three detuned low sine drones, high shimmer, filtered noise
+- Page-visibility ducking (5% volume when tab hidden)
+- Full `prefers-reduced-motion` support
+- localStorage preference persistence
+
+### Assets
+
+City photography in `/images/cities/`:
+- `mexico-city.webp` · `tokyo.webp` · `seoul.webp`
+- `berlin.webp` · `los-angeles.webp` · `shanghai.webp`
+
+---
+
+## Project Structure
+
+```
+velvet-rouge/
+├── BRAND-STRATEGY.md       → Brand positioning, voice, visual direction
+├── BUILD-LOG-ZAI.md        → Build log from z.ai (sound system + images)
+└── README.md               → This file
+```
+
+*Source code is maintained on the z.ai platform at space-z.ai.*
+
+---
+
+## Brand
+
+The complete brand strategy is documented in [`BRAND-STRATEGY.md`](./BRAND-STRATEGY.md), covering:
+- Emotional strategy and arc
+- Positioning and voice
+- Visual direction (colors, typography, animation)
+- Immersive features
+- Creative references (Wong Kar-wai, Sofia Coppola, Ryuichi Sakamoto)
+
+---
+
+## License
+
+© MMXXVI — Velvet Rouge. By Invitation.
